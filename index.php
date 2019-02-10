@@ -76,7 +76,7 @@ if ($url) {
 <form method="get">
     <p>filename:
         <input type="text" name="filename" style="width: 100%"
-               value="<?php echo $_REQUEST['filename']; ?>" title=""/>
+               value="<?php echo $_REQUEST['filename'] ?: $filename; ?>" title=""/>
     </p>
     <p>url:
         <input type="text" name="url" style="width: 100%"
