@@ -34,10 +34,6 @@ if ($url) {
 
         $curl_return = json_decode($curl_return);
 
-        if ($curl_return->msg == 'ok' && $curl_return->body && $curl_return->html && $curl_return->hasNext) {
-            break;
-        }
-
         $html = str_get_html($curl_return->html);
         $title = $curl_return->body->chapterName;
 
